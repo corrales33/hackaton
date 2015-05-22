@@ -1,0 +1,9 @@
+<% @words.each do | word| %>
+	<% word.name %>
+<% end %>
+
+<% id = rand(0..Word.all.size) %>
+			
+<% word = @words.where("id=?", id) %>
+
+ <%= link_to 'Play', word_path(word) %>
